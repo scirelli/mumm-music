@@ -509,3 +509,7 @@ ul {
     animation-duration: 0.01ms !important;
   }
 }
+
+.hidden {
+    display: none;
+}
