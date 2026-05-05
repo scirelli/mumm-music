@@ -57,20 +57,23 @@
         standalone audition and performance preparation is also available.
       </p>
       <div class="instruments">
-        <div class="instrument-card">
+        <div class="instrument-card" data-instrument="violin">
           <div class="instrument-icon" aria-hidden="true">🎻</div>
           <h3>Violin</h3>
           <p>Beginner - Advanced</p>
+          <audio src="" preload="none"></audio>
         </div>
-        <div class="instrument-card">
+        <div class="instrument-card" data-instrument="viola">
           <div class="instrument-icon" aria-hidden="true">🎻</div>
           <h3>Viola</h3>
           <p>Beginner - Advanced</p>
+          <audio src="" preload="none"></audio>
         </div>
-        <div class="instrument-card">
+        <div class="instrument-card" data-instrument="cello">
           <div class="instrument-icon" aria-hidden="true">🎻</div>
           <h3>Cello</h3>
           <p>Beginner</p>
+          <audio src="" preload="none"></audio>
         </div>
       </div>
     </div>
@@ -212,6 +215,23 @@
   document.querySelectorAll('.nav-links a').forEach(function(link) {
     link.addEventListener('click', function() {
       document.getElementById('menu-toggle').checked = false;
+    });
+  });
+</script>
+
+<!-- Instrument hover audio -->
+<script>
+  document.querySelectorAll('.instrument-card').forEach(function(card) {
+    var audio = card.querySelector('audio');
+    card.addEventListener('mouseenter', function() {
+      if (audio.src && audio.src !== window.location.href) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    });
+    card.addEventListener('mouseleave', function() {
+      audio.pause();
+      audio.currentTime = 0;
     });
   });
 </script>
