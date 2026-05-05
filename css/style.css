@@ -276,6 +276,12 @@ ul {
   flex: 1 1 200px;
   max-width: 260px;
   box-shadow: var(--shadow);
+  transition: box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.instrument-card:hover {
+  box-shadow: 0 4px 16px rgba(74, 44, 42, 0.18);
 }
 
 .instrument-card h3 {
