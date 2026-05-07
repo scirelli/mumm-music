@@ -519,3 +519,18 @@ ul {
 .hidden {
     display: none;
 }
+
+.sub-text {
+    margin-bottom: 7px;
+}
+
+.instr-level {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.portrait {
+    width: 22%;
+    margin: auto;
+    margin-bottom: 10px;
+}
