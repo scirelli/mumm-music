@@ -6,6 +6,15 @@
       <meta name="description" content="Veronica Mumm Music — In-home violin, cello, and viola lessons in Richmond, Virginia. Personalized instruction for all ages.">
       <title>Veronica Mumm Music — In-Home String Lessons in Richmond, VA</title>
       <link rel="stylesheet" href="css/style.css">
+      <script>
+        (function() {
+          var params = new URLSearchParams(window.location.search);
+          var theme = params.get('theme');
+          if (theme && ['earthy', 'pastel', 'bold', 'dark'].includes(theme)) {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+        })();
+      </script>
     </head>
 
     <body>
@@ -15,7 +24,6 @@
         <!-- ====== Header & Nav ====== -->
         <header class="site-header">
           <div class="header-inner">
-            <!-- TODO: Add a rainbow theme -->
             <a href="#" class="site-logo">Veronica Mumm Music</a>
             <nav aria-label="Main navigation">
               <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
@@ -26,6 +34,7 @@
               </label>
               <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#area">Service Area</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -49,7 +58,7 @@
           <section id="about" class="section">
             <div class="section-inner">
               <h2 class="section-title">About</h2>
-              <img src="/images/veronica.jpg" class="portrait"/>
+              <img src="images/veronica.jpg" class="portrait"/>
               <p style="text-align:center; max-width:650px; margin:0 auto var(--spacing-md);">
                 Veronica Mumm brings over 25 years of experience to personalized, in-home
                 music lessons tailored to each student's pace and goals. Whether you're a
@@ -58,12 +67,6 @@
                 Each student receives guidance on instrument setup and acquisition, and
                 standalone audition and performance preparation is also available.
               </p>
-              <!--TODO: Center list -->
-              <ul>
-                  <li>Member of the Richmond Philharmonic</li>
-                  <li>Studied at University of Wyoming and Boise State University</li>
-                  <li>Performed with over a dozen professional symphonies across the United States</li>
-              </ul>
               <div class="instruments">
                 <div class="instrument-card" data-instrument="violin">
                   <div class="instrument-icon" aria-hidden="true">🎻</div>
@@ -85,6 +88,27 @@
                   <p class="sub-text">Deep, expressive playing from day one.</p>
                   <p><em class="instr-level">Beginner</em></p>
                   <audio src="https://www.quantumdigitalmedia.de/Classicals-Music/Music/MO%20Collection/Additional%20Releases/Classicals.de%20-%20Vivaldi%20-%20Cello%20Sonata%20No.%205%20in%20E%20minor%20-%201.%20Largo%20-%20RV%2040%20%28Telemann%20Trio%29.mp3" preload="none"></audio>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Experience -->
+          <section id="experience" class="section section-alt">
+            <div class="section-inner">
+              <h2 class="section-title">Experience</h2>
+              <div class="experience-cards">
+                <div class="experience-card">
+                  <div class="experience-icon" aria-hidden="true">🎵</div>
+                  <p>Member of the Richmond Philharmonic</p>
+                </div>
+                <div class="experience-card">
+                  <div class="experience-icon" aria-hidden="true">🎓</div>
+                  <p>Studied at University of Wyoming and Boise State University</p>
+                </div>
+                <div class="experience-card">
+                  <div class="experience-icon" aria-hidden="true">🎶</div>
+                  <p>Performed with over a dozen professional symphonies across the United States</p>
                 </div>
               </div>
             </div>
